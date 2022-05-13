@@ -1,11 +1,15 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import CreateCustomerScreen from './src/screens/CreateCustomerScreen';
+
+import {Navigator} from './src/navigations/Navigator';
+import {Provider as PaperProvider} from 'react-native-paper';
+import Home from './src/screens/Home/Home';
 
 const App = () => {
   return (
-    <>
-      <CreateCustomerScreen />
-    </>
+    <PaperProvider>
+      <Navigator />
+    </PaperProvider>
   );
 };
 
